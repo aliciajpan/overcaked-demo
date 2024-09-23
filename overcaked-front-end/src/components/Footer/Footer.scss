@@ -1,0 +1,17 @@
+@use '../../styles/partials/_variables.scss' as *;
+
+.footer {
+    position: fixed;
+    bottom: 0.5rem;
+    color: $wood;
+
+    &__tag {
+        text-decoration: underline;
+        color: $wood;
+
+        &:hover {
+            opacity: 75%;
+            cursor: url('/src/assets/images/handpointer.png') 16 16, auto;
+        }
+    }
+}

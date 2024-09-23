@@ -1,0 +1,38 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/_mixins.scss' as *;
+
+.cake {
+    @include flexColumn;
+    @include flexCenter;
+    width: 250px;
+    height: 10rem;
+
+    &--big-cake {
+        height: 20rem; // 320px * 150% = 480px in the end
+        transform: scale(150%) translateY(25%);
+    }
+    
+    &--small-cake {
+        height: 8.5rem;
+        transform: scale(40%) translateY(35%);
+    
+        @include desktop {
+            height: 10rem;
+            transform: scale(50%) translateY(25%);
+        }
+    }
+}
+
+.plate {
+        width: 300px;
+        height: 110px;
+        position: absolute;
+        bottom: -15px;
+        left: -25px;
+        background-color: $plate;
+        border-radius: 50%;
+        box-shadow:
+            0 2px 0 darken($plate, 10%),
+            0 4px 0 darken($plate, 10%),
+            0 5px 40px rgba(black, 0.3);
+    }

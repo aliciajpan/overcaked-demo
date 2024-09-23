@@ -1,0 +1,20 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/_mixins.scss' as *;
+
+.flavourmenu {
+    @include flexColumn;
+    @include flexCenter;
+    background-color: $vanilla;
+    border-radius: 3rem;
+    width: 15rem;
+    height: 400px;
+    margin: 1rem;
+
+    @include desktop {
+        margin-top: 3rem;
+    }
+
+    @include desktop-XL {
+        margin-top: 2rem;
+    }
+}

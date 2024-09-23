@@ -1,0 +1,40 @@
+@use '../../styles/partials/_animations.scss' as *;
+@use '../../styles/partials/_mixins.scss' as *;
+
+.scoreboard {
+    @include flexColumn;
+    justify-content: start;
+    align-items: center;
+    flex: 1 0;
+    padding-bottom: 2rem;
+
+    &__header {
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon {
+        max-width: 4rem;
+        max-height: 4rem;
+        position: absolute;
+        left: 2rem;
+        top: 2rem;
+
+        @include desktop {
+            max-width: 5rem;
+            max-height: 5rem;
+            position: absolute;
+            left: 1rem;
+            top: 1.5rem;
+        }
+
+        &:hover {
+            animation: popBigger 1s both;
+            cursor: url('/src/assets/images/handpointer.png') 16 16, auto;
+        }
+    }
+
+    &__icon-wrapper {
+        display: flex;
+    }
+}

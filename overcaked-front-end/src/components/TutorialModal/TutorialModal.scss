@@ -1,0 +1,34 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/_mixins.scss' as *;
+
+.tutmodal {
+    @include flexColumn;
+    @include flexCenter;
+    width: 60%;
+    border-radius: 2rem;
+    padding: 1rem;
+
+    &__wrapper {
+        @include stretchScreen;
+        @include flexCenter;
+        position: absolute;
+        z-index: 10;
+        background-color: rgb(50,50,50,0.5);
+        top: 0;
+        left: 0;
+    }
+
+    &__image {
+        width: 60rem;
+        margin-top: 1rem;
+
+        @include desktop {
+            width: 60rem;
+            margin: 1rem 0;
+        }
+
+        @include desktop-XL {
+            width: 70rem;
+        }
+    }
+}

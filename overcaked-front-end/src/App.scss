@@ -1,0 +1,42 @@
+@use './styles/partials/_global.scss' as *;
+@use './styles/partials/_variables.scss' as *;
+@use './styles/partials/_mixins.scss' as *;
+
+.app {
+    @include flexCenter;
+    @media (max-width: 1023px) or (max-height: 767px) {
+        display: none;
+    }
+
+    &__window {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex: 1 0;
+    }
+}
+
+.redirect {
+    @include flexCenter;
+    @include flexColumn;
+    @include stretchScreen;
+    text-align: center;
+    padding: 1rem;
+
+    @include tablet {
+        display: none;
+    }
+
+    @include desktop {
+        display: none;
+    }
+
+    @media (max-width: 1023px) or (max-height: 767px) {
+        display: flex;
+    }
+
+    &__logo {
+        width: 80%;
+        margin-bottom: 2rem;
+    }
+}

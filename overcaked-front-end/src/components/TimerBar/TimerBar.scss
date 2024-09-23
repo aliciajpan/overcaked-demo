@@ -1,0 +1,34 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/_animations.scss' as *;
+
+.timerbar {
+    height: 1rem;
+    width: 90%;
+    background-color: $vanilla;
+    border-radius: 0.5rem;
+    padding: 0.1rem;
+
+    &__remaining {
+        height: 100%;
+        width: 100%;
+        border-radius: 0.5rem;
+        background-color: $green;
+        transform-origin: left center;
+
+        &--1 {
+            animation: barRunOut calc(15s) linear forwards;
+        }
+
+        &--2 {
+            animation: barRunOut calc(30s) linear forwards;
+        }
+
+        &--3 {
+            animation: barRunOut calc(45s) linear forwards;
+        }
+    }
+}
+
+.pause-animation {
+    animation-play-state: paused;
+}

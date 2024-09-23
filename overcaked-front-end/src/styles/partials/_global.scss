@@ -1,0 +1,72 @@
+@use './_fonts.scss' as *;
+@use './_variables.scss' as *;
+@use './_mixins.scss' as *;
+
+// reset
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'MilkCream', Arial;
+    background-color: $bkgd;
+    color: $chocolate;
+    cursor: url('/src/assets/images/whiskpointer.png') 16 16, auto;
+
+    h1 {
+        font-size: 5rem;
+        font-family: 'MilkCream';
+        font-weight: 500;
+    }
+
+    h2 { 
+        font-size: 3rem;
+        font-family: 'MilkCream';
+        font-weight: 500;
+    }
+
+    h3 { 
+        font-size: 2rem;
+        font-family: 'MilkCream';
+        font-weight: 500;
+    }
+
+    p { 
+        font-size: 1.5rem;
+        font-family: 'MilkCream';
+        font-weight: 500; 
+    }
+
+    button { 
+        font-size: 1.5rem;
+        font-family: 'MilkCream';
+        font-weight: 500; 
+    }
+    
+    ::placeholder {
+        font-family: 'MilkCream'; 
+        font-size: 1.5rem;
+        color: $wood;
+
+        @include desktop {
+            font-size: 2rem;
+        }
+    }
+
+    input {
+        font-family: 'MilkCream';
+        background-color: $vanilla;
+
+        &:hover {
+            cursor: url('/src/assets/images/chefpointer.png') 16 16, auto;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        color: $chocolate;
+    }
+}

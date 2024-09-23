@@ -1,0 +1,71 @@
+@use '../../styles/partials/_animations.scss' as *;
+@use '../../styles/partials/_mixins.scss' as *;
+@use '../../styles/partials/_variables.scss' as *;
+
+.tutorial {
+    @include flexColumn;
+    @include flexCenter;
+    flex: 1 0;
+    height: 100%;
+
+    &__header {
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon {
+        max-width: 4rem;
+        max-height: 4rem;
+        position: absolute;
+        left: 2rem;
+        top: 2rem;
+
+        @include desktop {
+            max-width: 5rem;
+            max-height: 5rem;
+            position: absolute;
+            left: 1rem;
+            top: 1.5rem;
+        }
+
+        &:hover {
+            animation: popBigger 1s both;
+            cursor: url('/src/assets/images/handpointer.png') 16 16, auto;
+        }
+    }
+
+    &__icon-wrapper {
+        display: flex;
+    }
+}
+
+.tutorial-module {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    height: max-content;
+
+    &__bkgd-container {
+        @include flexCenter;
+    }
+    
+    &__bkgd {
+        min-width: 90%;
+        max-width: 90%;
+        margin-top: 1rem;
+
+        @include desktop {
+            margin-top: 0;
+            min-width: 85%;
+            max-width: 85%;
+        }
+
+        @include desktop-XL {
+            margin-top: 2rem;
+        }
+
+        &:hover {
+            animation: popBiggerSubtle 1s both;
+        }
+    }
+}

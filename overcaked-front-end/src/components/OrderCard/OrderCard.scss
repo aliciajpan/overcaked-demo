@@ -1,0 +1,28 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/_animations.scss' as *;
+@use '../../styles/partials/_mixins.scss' as *;
+
+.ordercard {
+    @include flexColumn;
+    @include flexCenter;
+    background-color: $wood-light;
+    border-radius: 1rem;
+    height: 13rem;
+    width: 13rem;
+    box-shadow: 0 0 0.25rem 0.1rem $wood;
+    margin-right: 1rem;
+    padding-bottom: 0.5rem;
+    animation: slideCard 1s ease;
+
+    @include desktop {
+        margin: 0.5rem;
+        height: 15rem;
+        width: 15rem;
+        padding-bottom: 0;
+    }
+
+    &:hover {
+        animation: popBigger, slideCard 1s ease;
+        animation-fill-mode: forwards;
+    }
+}

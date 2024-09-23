@@ -1,0 +1,26 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/_mixins.scss' as *;
+
+.modal {
+    @include flexColumn;
+    @include flexCenter;
+    background-color: $strawberry-light;
+    width: 60%;
+    border-radius: 2rem;
+    padding: 1rem;
+
+    &__wrapper {
+        @include stretchScreen;
+        @include flexCenter;
+        position: absolute;
+        z-index: 15;
+        background-color: rgb(50,50,50,0.5);
+        top: 0;
+        left: 0;
+    }
+
+    &__image {
+        width: 15rem;
+        margin: 1rem 0;
+    }
+}

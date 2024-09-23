@@ -1,0 +1,52 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/_animations.scss' as *;
+@use '../../styles/partials/_mixins.scss' as *;
+
+.music {
+    @include flexColumn;
+    align-items: end;
+    width: 10rem;
+    position: fixed;
+    bottom: 0;
+    right: 0.5rem;
+    margin: 1rem;
+
+    &__image {
+        width: 3rem;
+
+        &:hover {
+            cursor: url('/src/assets/images/handpointer.png') 16 16, auto;
+            animation: popBigger 1s both;
+        }
+    }
+
+    &__info {
+        @include flexColumn;
+        justify-content: center;
+        align-items: end;
+        opacity: 0%;
+        animation: bubbleFade 2s ease;
+        animation-fill-mode: forwards;
+
+        &--bubble {
+            background-color: $vanilla;
+            border-radius: 1rem;
+            padding: 1rem;
+            color: $wood;
+        }
+        
+        &--tail {
+            background-color: $vanilla;
+            width: 4rem;
+            height: 1rem;
+            clip-path: polygon(0 0, 50% 0, 50% 100%);
+            margin-bottom: 0.5rem;
+        }
+
+        &:hover {
+            animation-name: popBigger, bubbleFade;
+            animation-duration: 1s, 2s;
+            animation-timing-function: both, both;
+        }
+    }
+}

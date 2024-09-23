@@ -1,0 +1,53 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/_animations.scss' as *;
+@use '../../styles/partials/_mixins.scss' as *;
+
+.scorecard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 3rem;
+    border-radius: 2rem;
+    padding: 0 1rem;
+    font-size: 2rem;
+    margin: 1rem;
+
+    &:hover {
+        animation: popBiggerSubtle 1s ease;
+        animation-fill-mode: forwards;
+    }
+
+    & > div {
+        flex: 1 0;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    & > div:nth-child(1) {
+        justify-content: start;
+    }
+
+    & > div:nth-last-child(1) {
+        justify-content: end;
+    }
+
+    &--pink {
+        background-color: $strawberry-light;
+    }
+
+    &--brown {
+        background-color: $chocolate-light;
+        color: $vanilla;
+    }
+
+    &--cream {
+        background-color: $vanilla;
+    }
+}
+
+.highlight {
+    @include selectedGlow;
+    animation: popBigger 1s ease;
+    animation-fill-mode: forwards;
+}

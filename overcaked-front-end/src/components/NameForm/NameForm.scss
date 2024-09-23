@@ -1,0 +1,29 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/_animations.scss' as *;
+@use '../../styles/partials/_mixins.scss' as *;
+
+.nameform {
+    @include flexColumn;
+    @include flexCenter;
+
+    &__input {
+        height: 3.5rem;
+        width: 23rem;
+        padding: 1rem;
+        border-radius: 1rem;
+        font-size: 1.5rem;
+        background-color: $vanilla;
+        margin-bottom: 1rem;
+
+        @include desktop {
+            height: 4rem;
+            width: 25rem;
+            font-size: 2rem;
+        }
+
+        &:hover, &:focus{
+            animation: popBigger 1s ease;
+            animation-fill-mode: forwards;
+        }
+    }
+}

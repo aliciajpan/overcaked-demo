@@ -1,0 +1,72 @@
+@use '../../styles/partials/_mixins.scss' as *;
+@use '../../styles/partials/_animations.scss' as *;
+@use '../../styles/partials/_variables.scss' as *;
+
+.menu {
+    @include flexColumn;
+    @include flexCenter;
+
+    &__wrapper {
+        @include stretchScreen;
+        @include flexCenter;
+        position: absolute;
+        overflow: hidden;
+    }
+
+    &__logo {
+        width: 34rem;
+        margin: 1rem 0 3rem;
+        animation: popBiggerLogo 8s infinite;
+
+        @include desktop {
+            width: 50%;
+            margin: 2rem;
+        }
+    }
+
+    &__orders {
+        display: flex;
+    }
+
+    &__image {
+        position: absolute;
+
+        &--whisk {
+            rotate: 25deg;
+            right: -18rem;
+            top: -48rem;
+            scale: 0.3;
+
+            @include desktop {
+                right: -15rem;
+                top: -45rem;
+                scale: 0.4;
+            }  
+            
+            &:hover {
+                animation: stirWhisk 0.5s infinite;
+                animation-fill-mode: forwards;
+            }
+        }
+
+        &--folder {
+            left: -48rem;
+            bottom: -63rem;
+            scale: 0.23;
+            rotate: -32deg;
+            cursor: url('/src/assets/images/handpointer.png') 16 16, auto;
+
+            @include desktop {
+                left: -45rem;
+                bottom: -61rem;
+                scale: 0.3;
+                rotate: -35deg;
+            }
+
+            &:hover {
+                animation: popBigger 1s ease;
+                animation-fill-mode: forwards;
+            }
+        }
+    }
+}

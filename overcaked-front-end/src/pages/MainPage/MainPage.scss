@@ -1,0 +1,166 @@
+@use '../../styles/partials/_variables.scss' as *;
+@use '../../styles/partials/_animations.scss' as *;
+@use '../../styles/partials/_mixins.scss' as *;
+
+.main {
+    display: grid;
+    grid-template-columns: 25% 5% 40% 5% 25%;
+    grid-template-rows: 34% 66%;
+
+    &__wrapper {
+        @include stretchScreen;
+        overflow: hidden;
+        position: absolute;
+    }
+
+    &__orders {
+        display: flex;
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+        justify-self: flex-start;
+        align-self:center;
+    }
+
+    &__build {
+        display: flex;
+        justify-content: center;
+        height: 30rem;
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+        position: absolute;
+        bottom: 6rem;
+        left: 0;
+        right: 0;
+    }
+
+    &__edit {
+        @include flexColumn;
+        @include flexCenter;
+        justify-self: center;
+        grid-column: 5 / 6;
+        grid-row: 1 / -1;
+        scale: 0.8;
+        margin-top: -6rem;
+
+        @include desktop {
+            margin-top: -5rem;
+            scale: 0.85;
+        }
+
+        @include desktop-XL {
+            margin-top: 0;
+            scale: 1;
+        }
+    }
+
+    &__info {
+        @include flexColumn;
+        @include flexCenter;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+
+        @include desktop {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__icon {
+        max-width: 4rem;
+        position: absolute;
+        bottom: 5rem;
+
+        @include desktop {
+            max-width: 5rem;
+            bottom: 3rem;
+        }
+
+        &:hover {
+            animation: popBigger 1s both;
+            cursor: url('/src/assets/images/handpointer.png') 16 16, auto;
+        }
+    }
+
+    &__icon-wrapper {
+        max-width: 5rem;
+
+        &--submit {
+            grid-column: 4 / 5;
+            grid-row: 2 / 3;
+            position: absolute;
+            bottom: -3rem;
+            right: 15.5rem;
+
+            @include desktop {
+                max-width: 5rem;
+                position: static;
+                bottom: -3rem;
+                right: 15.5rem;
+            }
+        }
+
+        &--trash {
+            grid-column: 2 / 3;
+            grid-row: 2 / 3;
+            position: absolute;
+            bottom: -3rem;
+            left: 12rem;
+
+            @include desktop {
+                position: static;
+                bottom: -3rem;
+                left: 12rem;
+            }
+        }
+    }
+
+    &__score {
+        font-size: 3rem;
+
+        @include desktop {
+            font-size: 4rem;
+        }
+    }
+
+    &__hangry {
+        text-align: center;
+        width: 90%;
+    }
+
+    &__image {
+        position: absolute;
+
+        &--folder {
+            left: -50rem;
+            bottom: -68rem;
+            scale: 0.15;
+            rotate: -32deg;
+            z-index: 2;
+            cursor: url('/src/assets/images/handpointer.png') 16 16, auto;
+            
+            &:hover {
+                animation: popBigger 1s ease;
+                animation-fill-mode: forwards;
+            }
+
+            @include desktop {
+                scale: 0.2;
+                left: -49rem;
+                bottom: -66rem;
+                rotate: -31deg;
+            }
+        }
+    }
+}
+
+.score-text {
+    animation: scoringText 0.5s ease;
+}
+
+.warn-text {
+    animation: warningText 0.5s ease;
+}
+
+.shake-cake {
+    animation: shakeWrongCake 0.35s ease;
+}

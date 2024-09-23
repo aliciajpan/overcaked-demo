@@ -1,0 +1,39 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/_mixins.scss' as *;
+
+.icinglayer {
+    position: absolute;
+    left: 0;
+
+    &--1 {
+        bottom: 152px;
+    }
+
+    &--2 {
+        bottom: 205px;
+    }
+
+    &--3 {
+        bottom: 255px;
+    }
+
+    &--0 {
+        display: none;
+    }
+
+    &--chocolate {
+        @include icingColoring($chocolate);
+    }
+    
+    &--vanilla {
+        @include icingColoring($vanilla);
+    }
+    
+    &--strawberry {
+        @include icingColoring($strawberry);
+    }
+}
+
+.selected-icing {
+    @include selectedGlow;
+}

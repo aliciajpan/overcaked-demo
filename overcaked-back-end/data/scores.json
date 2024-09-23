@@ -1,0 +1,44 @@
+[
+  {
+    "id": "960a49bc-d2e2-4c84-b985-16a8a0aa05ec",
+    "name": "Alicia",
+    "score": 5900,
+    "time": 1726053461509
+  },
+  {
+    "id": "09ee97aa-12e6-4bbe-b99a-b0faa560fe04",
+    "name": "Gordon Ramsey",
+    "score": 3600,
+    "time": 1727051594865
+  },
+  {
+    "id": "364bfae0-4d7b-42b7-9345-1b569a940715",
+    "name": "Chef Bubbles",
+    "score": 3550,
+    "time": 1727023734510
+  },
+  {
+    "id": "a1dd020d-9685-4c2d-ac1d-83287c194924",
+    "name": "afk",
+    "score": 0,
+    "time": 1726653862984
+  },
+  {
+    "id": "41d66e04-b5ed-4275-9882-efdca3dd072f",
+    "name": "ReadyPlayerOne",
+    "score": 2550,
+    "time": 1727054109734
+  },
+  {
+    "id": "ba6bb1ae-618c-433d-ae22-335fe8a493de",
+    "name": "Test",
+    "score": 5200,
+    "time": 1727054720527
+  },
+  {
+    "id": "e86d6a1e-c861-4a1e-9fb0-4ea2ca739353",
+    "name": "Anonymous Chef",
+    "score": 0,
+    "time": 1727055460031
+  }
+]

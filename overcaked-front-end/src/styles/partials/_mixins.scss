@@ -1,0 +1,146 @@
+@use './_variables.scss' as *;
+
+// display 
+@mixin stretchScreen {
+    width: 100vw;
+    height: 100vh;
+}
+
+@mixin flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// screen sizes
+@mixin tablet {
+    @media (max-width: $tablet-width-max) or (max-height: $tablet-height-max) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $desktop-width-min) and (min-height: $desktop-height-min) {
+        @content;
+    }
+}
+
+@mixin desktop-medium {
+    @media (min-width: $desktop-width-min) and (min-height: $desktop-height-min) 
+    and ((max-width: $desktop-width-max) or (max-height: $desktop-height-max)) {
+        @content;
+    }
+}
+
+@mixin desktop-XL {
+    @media (min-width: $desktop-width-XL) and (min-height: $desktop-height-XL) {
+        @content;
+    }
+}
+
+// cake component design
+@mixin foodColoring($color) {
+    background-color: $color;
+    box-shadow:
+        0 2px 0px lighten($color, 5%),
+        0 4px 0px darken($color, 8.2%),
+        0 6px 0px darken($color, 8.4%),
+        0 8px 0px darken($color, 8.6%),
+        0 10px 0px darken($color, 8.8%),
+        0 12px 0px darken($color, 9%),
+        0 14px 0px darken($color, 9.2%),
+        0 16px 0px darken($color, 9.4%),
+        0 18px 0px darken($color, 9.6%),
+        0 20px 0px darken($color, 9.8%),
+        0 22px 0px darken($color, 10%),
+        0 24px 0px darken($color, 10.2%),
+        0 26px 0px darken($color, 10.4%),
+        0 28px 0px darken($color, 10.6%),
+        0 30px 0px darken($color, 10.8%),
+        0 32px 0px darken($color, 11%),
+        0 34px 0px darken($color, 11.2%),
+        0 36px 0px darken($color, 11.4%),
+        0 38px 0px darken($color, 11.6%),
+        0 40px 0px darken($color, 11.8%),
+        0 42px 0px darken($color, 12%),
+        0 44px 0px darken($color, 12.2%),
+        0 46px 0px darken($color, 12.4%),
+        0 48px 0px darken($color, 12.6%),
+        0 50px 0px darken($color, 12.8%);
+}
+
+@mixin selectedGlow {
+    border: darkgoldenrod 5px solid;
+}
+
+@mixin icingColoring($color) {
+    .icing {
+        top: -2px;
+        left: 0;
+        background-color: $color;
+        width: 15.625rem;
+        height: 6.25rem;
+        border-radius: 50%;
+        position: absolute;
+    
+        &:before {
+            content: "";
+            position: absolute;
+            top: 4px;
+            right: 5px;
+            bottom: 6px;
+            left: 5px;
+            background-color: lighten($color, 8%);
+            box-shadow:
+                0 0 4px lighten($color, 5%),
+                0 0 4px lighten($color, 10%),
+                0 0 4px lighten($color, 15%);
+            border-radius: 50%;
+            z-index: 1;
+        }
+    }
+    
+    .drip {
+        display: block;
+        width: 50px;
+        height: 60px;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+        background-color: lighten($color, 2%);
+        position: absolute;
+
+        &--selected {
+            @include selectedGlow;
+        }
+    }
+    
+    .drip1 {
+        top: 53px;
+        left: 5px;
+        transform: skewY(15deg);
+        height: 48px;
+        width: 40px;
+    }
+    
+    .drip2 {
+        top: 54px;
+        left: 90px;
+        width: 80px;
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+    }
+    
+    .drip3 {
+        top: 50px;
+        left: 180px;
+        transform: skewY(-15deg);
+        width: 65px;
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+    }
+}
