@@ -12,21 +12,23 @@ function ScoreboardPage() {
     const [searchParam, setSearchParam] = useSearchParams();
     const uploadedID = searchParam.get("id");
 
-    async function fetchAllScores() {
+    async function fetchPlaceholderScores() {
         try {
-            const allScores = await axios.get("http://localhost:8080/scores");
-            allScores.data.sort((a,b) => b.score - a.score);
-            setScoresArray(allScores.data);
+            const response = await fetch('/scores.json');
+            const placeholderScores = await response.json();
+            setScoresArray(placeholderScores.sort((a,b) => b.score - a.score)); // put later when combo w local storage?
+
+            localStorage.setItem('placeholderScoreData', JSON.stringify(placeholderScores));
         }
 
         catch(error) {
             console.error(error);
         }
-    }
+    };
 
-    useEffect (() => {
-        fetchAllScores();
-    }, [])
+    useEffect(() => {
+        fetchPlaceholderScores();
+    }, []);
 
     if (scoresArray.length === 0) {
         return (
