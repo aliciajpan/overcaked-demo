@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from 'react';
-import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
 import OrderList from '../../components/OrderList/OrderList.jsx';
 import Cake from '../../components/Cake/Cake';
@@ -104,11 +103,35 @@ function MainPage() {
         }
 
         else {
-            console.log("nothing selected");
+            console.log("Nothing selected");
         }
     }
 
-    async function submitCake() {
+    function compareCakes(submittedCake, truthCake) {
+        if (submittedCake.icing === truthCake.icing 
+            && submittedCake.cakeLayers.length === truthCake.layerCount) {
+                for (let j=0; j<submittedCake.cakeLayers.length; j++) {
+                    if (submittedCake.cakeLayers[j] !== truthCake.layers[j]) {
+                        return false;
+                    }
+                }
+            return true;
+        }
+    
+        return false;
+    }
+
+    function handleSubmittedCake(req) {
+        const allCakes = JSON.parse(localStorage.getItem("cakes")); // need to check if null?
+
+        for (let i=0; i<req.compareIds.length; i++) {
+            if (compareCakes(req, allCakes[req.compareIds[i]-1])) {
+                return (allCakes.find((cake) => cake.id === req.compareIds[i]));
+            }
+        }
+    }
+
+    function submitCake() {
         try {
             const req = {
                 compareIds: cakesToDisplay,
@@ -116,12 +139,13 @@ function MainPage() {
                 icing: icing
             }
 
-            const matchedCake = await axios.post("http://localhost:8080/cakes/submit", req);
-            if (matchedCake.data) {
-                updateCakesToDisplay(matchedCake.data.id);
+            const matchedCake = handleSubmittedCake(req);            
+            
+            if (matchedCake) {
+                updateCakesToDisplay(matchedCake.id);
                 setScoreText(true);
                 setTimeout(() => setScoreText(false), 500);
-                setScore(score + matchedCake.data.points);
+                setScore(score + matchedCake.points);
                 setCakelayers([]);
                 setIcing("");
                 setSelectedItem(null);
