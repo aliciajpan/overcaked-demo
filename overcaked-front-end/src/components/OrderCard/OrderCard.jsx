@@ -34,7 +34,7 @@ function OrderCard({num, icing, cakelayers, expireCake, isGameOver, tutorialModa
 
     return (
         <article className="ordercard">
-            <p>Order #{num} / 20</p>
+            <p>Order &nbsp;{num} / 20</p>
             <Cake icing={icing} cakelayers={cakelayers} size="small-cake"/>
             <TimerBar time={cakelayers.length} isGameOver={isGameOver} tutorialModalOpen={tutorialModalOpen}/>
         </article>
