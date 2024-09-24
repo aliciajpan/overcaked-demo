@@ -180,6 +180,7 @@ function MainPage() {
     function expireCake(expiredId) {
         if (!isGameOverRef.current) {
             updateCakesToDisplay(expiredId);
+            console.log("expire: cake", expiredId);
             setWarnText(true);
             setTimeout(() => setWarnText(false), 500);
             resolvedCakesCountRef.current = resolvedCakesCountRef.current+1;

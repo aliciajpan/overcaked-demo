@@ -1,10 +1,10 @@
 [
   {
     "id": 1,
-    "layerCount": 2,
-    "layers": ["strawberry", "strawberry"],
+    "layerCount": 1,
+    "layers": ["strawberry"],
     "icing": "vanilla",
-    "points": 300
+    "points": 150
   },
   {
     "id": 2,
@@ -16,23 +16,23 @@
   {
     "id": 3,
     "layerCount": 2,
-    "layers": ["vanilla", "vanilla"],
+    "layers": ["chocolate", "vanilla"],
     "icing": "chocolate",
-    "points": 250
+    "points": 300
   },
   {
     "id": 4,
     "layerCount": 3,
-    "layers": ["vanilla", "vanilla", "chocolate"],
+    "layers": ["vanilla", "strawberry", "chocolate"],
     "icing": "strawberry",
-    "points": 400
+    "points": 450
   },
   {
     "id": 5,
     "layerCount": 3,
-    "layers": ["strawberry", "chocolate", "strawberry"],
+    "layers": ["vanilla", "chocolate", "vanilla"],
     "icing": "strawberry",
-    "points": 500
+    "points": 400
   },
   {
     "id": 6,
@@ -45,8 +45,8 @@
     "id": 7,
     "layerCount": 3,
     "layers": ["chocolate", "strawberry", "vanilla"],
-    "icing": "strawberry",
-    "points": 450
+    "icing": "vanilla",
+    "points": 400
   },
   {
     "id": 8,
@@ -72,9 +72,9 @@
   {
     "id": 11,
     "layerCount": 3,
-    "layers": ["chocolate", "strawberry", "chocolate"],
+    "layers": ["vanilla", "strawberry", "chocolate"],
     "icing": "chocolate",
-    "points": 500
+    "points": 450
   },
   {
     "id": 12,
@@ -87,8 +87,8 @@
     "id": 13,
     "layerCount": 2,
     "layers": ["strawberry", "chocolate"],
-    "icing": "chocolate",
-    "points": 350
+    "icing": "vanilla",
+    "points": 300
   },
   {
     "id": 14,
@@ -120,10 +120,10 @@
   },
   {
     "id": 18,
-    "layerCount": 3,
-    "layers": ["strawberry", "strawberry", "chocolate"],
+    "layerCount": 1,
+    "layers": ["chocolate"],
     "icing": "vanilla",
-    "points": 450
+    "points": 150
   },
   {
     "id": 19,
@@ -134,9 +134,9 @@
   },
   {
     "id": 20,
-    "layerCount": 3,
-    "layers": ["vanilla", "vanilla", "chocolate"],
+    "layerCount": 2,
+    "layers": ["chocolate", "vanilla"],
     "icing": "strawberry",
-    "points": 400
+    "points": 300
   }
 ]
