@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
+import { v4 as uuidv4 } from 'uuid';
 import OrderList from '../../components/OrderList/OrderList.jsx';
 import Cake from '../../components/Cake/Cake';
 import Button from '../../components/Button/Button.jsx';
@@ -182,11 +183,18 @@ function MainPage() {
         try {
             const useThisName = localStorage.getItem("overcakedSavedName");
             const req = {
-                playerName: useThisName || "Anonymous Chef",
-                playerScore: score
+                id: uuidv4(),
+                name: useThisName || "Anonymous Chef",
+                score: score,
+                time: (new Date()).getTime()
             }
-            const newPost = await axios.post("http://localhost:8080/scores", req);
-            setNewScoreID(newPost.data.id);
+
+            const existingScoreData = localStorage.getItem('scoreData');
+            const existingScoreDataArray = existingScoreData ? JSON.parse(existingScoreData) : [];
+            const updatedScoreData = [...existingScoreDataArray, req];
+
+            localStorage.setItem("scoreData", JSON.stringify(updatedScoreData));
+            setNewScoreID(req.id);
         }
 
         catch(error) {

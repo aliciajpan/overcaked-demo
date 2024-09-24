@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { NavLink, useSearchParams } from 'react-router-dom';
-import axios from 'axios';
 import ScoreCard from '../../components/ScoreCard/ScoreCard';
 import Footer from '../../components/Footer/Footer';
 import homeIcon from '../../assets/icons/home.png';
@@ -12,13 +11,29 @@ function ScoreboardPage() {
     const [searchParam, setSearchParam] = useSearchParams();
     const uploadedID = searchParam.get("id");
 
-    async function fetchPlaceholderScores() {
+    async function fetchScores() {
         try {
-            const response = await fetch('/scores.json');
-            const placeholderScores = await response.json();
-            setScoresArray(placeholderScores.sort((a,b) => b.score - a.score)); // put later when combo w local storage?
+            let placeholderScores = localStorage.getItem('placeholderScores');
+            let existingScoreData = localStorage.getItem('scoreData');
 
-            localStorage.setItem('placeholderScoreData', JSON.stringify(placeholderScores));
+            // if placeholderScores in localStorage but not scoreData, why does placeholder stuff not get duplicated when it gets to this loop?
+            // because placeholder stuff has its own key and here, the updated span first thing is empty, read once from replaced placeholder and replace score data itself
+            if (!placeholderScores || !existingScoreData) {
+                const response = await fetch('/scores.json');
+                placeholderScores = await response.json();
+                localStorage.setItem('placeholderScores', JSON.stringify(placeholderScores))
+
+                existingScoreData = localStorage.getItem('scoreData');
+                console.log(existingScoreData);
+                const existingScoreDataArray = existingScoreData ? JSON.parse(existingScoreData) : [];
+                const updatedScoreData = [...existingScoreDataArray, ...placeholderScores];
+                console.log(updatedScoreData);
+                localStorage.setItem('scoreData', JSON.stringify(updatedScoreData));
+            }
+
+            existingScoreData = localStorage.getItem('scoreData');
+            const allScoreData = existingScoreData ? JSON.parse(existingScoreData) : [];
+            setScoresArray(allScoreData.sort((a,b) => b.score - a.score));
         }
 
         catch(error) {
@@ -27,7 +42,7 @@ function ScoreboardPage() {
     };
 
     useEffect(() => {
-        fetchPlaceholderScores();
+        fetchScores();
     }, []);
 
     if (scoresArray.length === 0) {
