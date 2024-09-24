@@ -12,10 +12,14 @@
     padding: 0 1rem;
     font-size: 2rem;
     margin: 1rem;
+    
+    transition: transform 0.3s ease;
+    transform: scale(1);
 
     &:hover {
-        animation: popBiggerSubtle 1s ease;
-        animation-fill-mode: forwards;
+        // animation: popBiggerSubtle 1s ease;
+        // animation-fill-mode: forwards;
+        transform: scale(1.02);
     }
 
     & > div {

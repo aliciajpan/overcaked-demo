@@ -70,13 +70,17 @@
         position: absolute;
         bottom: 5rem;
 
+        transition: transform 0.3s ease;
+        transform: scale(1);
+
         @include desktop {
             max-width: 5rem;
             bottom: 3rem;
         }
 
         &:hover {
-            animation: popBigger 1s both;
+            transform: scale(1.1);
+            // animation: popBigger 1s both;
             cursor: url('/src/assets/images/handpointer.png') 16 16, auto;
         }
     }
@@ -137,10 +141,14 @@
             rotate: -32deg;
             z-index: 2;
             cursor: url('/src/assets/images/handpointer.png') 16 16, auto;
+
+            transition: transform 0.3s ease;
+            transform: scale(1);
             
             &:hover {
-                animation: popBigger 1s ease;
-                animation-fill-mode: forwards;
+                // animation: popBigger 1s ease;
+                // animation-fill-mode: forwards;
+                transform: scale(1.1);
             }
 
             @include desktop {

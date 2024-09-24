@@ -6,10 +6,14 @@
     @include flexCenter;
     border-radius: 3rem;
     margin: 2rem;
+    
+    transition: transform 0.3s ease;
+    transform: scale(1);
 
     &:hover {
         cursor: url('/src/assets/images/handpointer.png') 16 16, auto;
-        animation: popBigger 1s both;
+        // animation: popBigger 1s both;
+        transform: scale(1.1);
     }
 
     &--big {

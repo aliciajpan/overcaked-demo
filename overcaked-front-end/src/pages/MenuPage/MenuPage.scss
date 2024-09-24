@@ -56,6 +56,9 @@
             rotate: -32deg;
             cursor: url('/src/assets/images/handpointer.png') 16 16, auto;
 
+            transition: transform 0.3s ease;
+            transform: scale(1);
+
             @include desktop {
                 left: -45rem;
                 bottom: -61rem;
@@ -64,8 +67,9 @@
             }
 
             &:hover {
-                animation: popBigger 1s ease;
-                animation-fill-mode: forwards;
+                transform: scale(1.1);
+                // animation: popBigger 1s ease;
+                // animation-fill-mode: forwards;
             }
         }
     }
