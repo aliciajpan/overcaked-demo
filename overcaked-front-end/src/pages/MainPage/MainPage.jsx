@@ -41,8 +41,10 @@ function MainPage() {
 
     async function fetchAllCakes() {
         try {
-            const allCakes = await axios.post("http://localhost:8080/cakes");
-            setCakeArray(allCakes.data);
+            const response = await fetch('/cakes.json');
+            const cakes = await response.json();
+            localStorage.setItem('cakes', JSON.stringify(cakes))
+            setCakeArray(cakes);
         }
 
         catch(error) {
