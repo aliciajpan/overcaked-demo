@@ -50,7 +50,7 @@ function ScoreboardPage() {
             <section className='scoreboard'>
                 <div className='scoreboard__header'>
                     <NavLink className="scoreboard__icon-wrapper" to="/"><img className='scoreboard__icon' src={homeIcon}/></NavLink>
-                    <h1>Scores</h1>
+                    <h1>Your Bakery Scores</h1>
                 </div>
                 <br></br>
                 <h3>No scores to display yet!</h3>
@@ -65,7 +65,7 @@ function ScoreboardPage() {
                     <NavLink className="scoreboard__icon-wrapper" to="/">
                         <img className='scoreboard__icon' src={homeIcon} alt="home icon"/>
                     </NavLink>
-                    <h1>Scores</h1>
+                    <h1>Your Bakery Scores</h1>
                 </div>
 
                 {scoresArray.map((scoreObj, index) => {
