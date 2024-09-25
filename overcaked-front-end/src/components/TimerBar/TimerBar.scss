@@ -16,15 +16,15 @@
         transform-origin: left center;
 
         &--1 {
-            animation: barRunOut calc(15s) linear forwards;
+            animation: barRunOut calc(2s) linear forwards;
         }
 
         &--2 {
-            animation: barRunOut calc(30s) linear forwards;
+            animation: barRunOut calc(4s) linear forwards;
         }
 
         &--3 {
-            animation: barRunOut calc(45s) linear forwards;
+            animation: barRunOut calc(6s) linear forwards;
         }
     }
 }

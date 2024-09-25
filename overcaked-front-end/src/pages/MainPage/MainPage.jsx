@@ -33,10 +33,10 @@ function MainPage() {
     const nextCakeToDisplayRef = useRef(nextCakeToDisplay);
     const missedCakesCountRef = useRef(missedCakesCount);
     const resolvedCakesCountRef = useRef(0);
-    const isGameOverRef = useRef(isGameOver);
+    const isGameOverRef = useRef(false); //useRef(isGameOver);
 
     const maxCakeCount = 20;
-    const expiredCakeLimit = 10;
+    const expiredCakeLimit = 20;
 
     async function fetchAllCakes() {
         try {
@@ -178,7 +178,9 @@ function MainPage() {
     }
 
     function expireCake(expiredId) {
-        if (!isGameOverRef.current) {
+        console.log("enter expireCake");
+        console.log(isGameOverRef.current);
+        // if (!isGameOverRef.current) {
             updateCakesToDisplay(expiredId);
             console.log("expire: cake", expiredId);
             setWarnText(true);
@@ -197,7 +199,7 @@ function MainPage() {
                 isGameOverRef.current = true;
                 setIsGameOver(isGameOverRef.current);
             }
-        }
+        // }
     }
 
     function trashCake() {
