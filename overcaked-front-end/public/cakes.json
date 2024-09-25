@@ -1,142 +1,142 @@
 [
-  {
-    "id": 1,
-    "layerCount": 1,
-    "layers": ["strawberry"],
-    "icing": "vanilla",
-    "points": 150
-  },
-  {
-    "id": 2,
-    "layerCount": 2,
-    "layers": ["vanilla", "vanilla"],
-    "icing": "strawberry",
-    "points": 250
-  },
-  {
-    "id": 3,
-    "layerCount": 2,
-    "layers": ["chocolate", "vanilla"],
-    "icing": "chocolate",
-    "points": 300
-  },
-  {
-    "id": 4,
-    "layerCount": 3,
-    "layers": ["vanilla", "strawberry", "chocolate"],
-    "icing": "strawberry",
-    "points": 450
-  },
-  {
-    "id": 5,
-    "layerCount": 3,
-    "layers": ["vanilla", "chocolate", "vanilla"],
-    "icing": "strawberry",
-    "points": 400
-  },
-  {
-    "id": 6,
-    "layerCount": 2,
-    "layers": ["strawberry", "strawberry"],
-    "icing": "strawberry",
-    "points": 350
-  },
-  {
-    "id": 7,
-    "layerCount": 3,
-    "layers": ["chocolate", "strawberry", "vanilla"],
-    "icing": "vanilla",
-    "points": 400
-  },
-  {
-    "id": 8,
-    "layerCount": 1,
-    "layers": ["strawberry"],
-    "icing": "vanilla",
-    "points": 150
-  },
-  {
-    "id": 9,
-    "layerCount": 2,
-    "layers": ["chocolate", "chocolate"],
-    "icing": "strawberry",
-    "points": 350
-  },
-  {
-    "id": 10,
-    "layerCount": 1,
-    "layers": ["chocolate"],
-    "icing": "chocolate",
-    "points": 200
-  },
-  {
-    "id": 11,
-    "layerCount": 3,
-    "layers": ["vanilla", "strawberry", "chocolate"],
-    "icing": "chocolate",
-    "points": 450
-  },
-  {
-    "id": 12,
-    "layerCount": 2,
-    "layers": ["strawberry", "vanilla"],
-    "icing": "chocolate",
-    "points": 300
-  },
-  {
-    "id": 13,
-    "layerCount": 2,
-    "layers": ["strawberry", "chocolate"],
-    "icing": "vanilla",
-    "points": 300
-  },
-  {
-    "id": 14,
-    "layerCount": 3,
-    "layers": ["strawberry", "vanilla", "chocolate"],
-    "icing": "chocolate",
-    "points": 450
-  },
-  {
-    "id": 15,
-    "layerCount": 2,
-    "layers": ["vanilla", "strawberry"],
-    "icing": "vanilla",
-    "points": 250
-  },
-  {
-    "id": 16,
-    "layerCount": 1,
-    "layers": ["vanilla"],
-    "icing": "vanilla",
-    "points": 100
-  },
-  {
-    "id": 17,
-    "layerCount": 3,
-    "layers": ["strawberry", "chocolate", "vanilla"],
-    "icing": "vanilla",
-    "points": 400
-  },
-  {
-    "id": 18,
-    "layerCount": 1,
-    "layers": ["chocolate"],
-    "icing": "vanilla",
-    "points": 150
-  },
-  {
-    "id": 19,
-    "layerCount": 2,
-    "layers": ["vanilla", "strawberry"],
-    "icing": "chocolate",
-    "points": 300
-  },
-  {
-    "id": 20,
-    "layerCount": 2,
-    "layers": ["chocolate", "vanilla"],
-    "icing": "strawberry",
-    "points": 300
-  }
+    {
+        "id": 1,
+        "layerCount": 1,
+        "layers": ["strawberry"],
+        "icing": "vanilla",
+        "points": 150
+    },
+    {
+        "id": 2,
+        "layerCount": 2,
+        "layers": ["vanilla", "vanilla"],
+        "icing": "strawberry",
+        "points": 250
+    },
+    {
+        "id": 3,
+        "layerCount": 2,
+        "layers": ["chocolate", "vanilla"],
+        "icing": "chocolate",
+        "points": 300
+    },
+    {
+        "id": 4,
+        "layerCount": 3,
+        "layers": ["vanilla", "strawberry", "chocolate"],
+        "icing": "strawberry",
+        "points": 450
+    },
+    {
+        "id": 5,
+        "layerCount": 3,
+        "layers": ["vanilla", "chocolate", "vanilla"],
+        "icing": "strawberry",
+        "points": 400
+    },
+    {
+        "id": 6,
+        "layerCount": 2,
+        "layers": ["strawberry", "strawberry"],
+        "icing": "strawberry",
+        "points": 350
+    },
+    {
+        "id": 7,
+        "layerCount": 3,
+        "layers": ["chocolate", "strawberry", "vanilla"],
+        "icing": "vanilla",
+        "points": 400
+    },
+    {
+        "id": 8,
+        "layerCount": 1,
+        "layers": ["strawberry"],
+        "icing": "vanilla",
+        "points": 150
+    },
+    {
+        "id": 9,
+        "layerCount": 2,
+        "layers": ["chocolate", "chocolate"],
+        "icing": "strawberry",
+        "points": 350
+    },
+    {
+        "id": 10,
+        "layerCount": 1,
+        "layers": ["chocolate"],
+        "icing": "chocolate",
+        "points": 200
+    },
+    {
+        "id": 11,
+        "layerCount": 3,
+        "layers": ["vanilla", "strawberry", "chocolate"],
+        "icing": "chocolate",
+        "points": 450
+    },
+    {
+        "id": 12,
+        "layerCount": 2,
+        "layers": ["strawberry", "vanilla"],
+        "icing": "chocolate",
+        "points": 300
+    },
+    {
+        "id": 13,
+        "layerCount": 2,
+        "layers": ["strawberry", "chocolate"],
+        "icing": "vanilla",
+        "points": 300
+    },
+    {
+        "id": 14,
+        "layerCount": 3,
+        "layers": ["strawberry", "vanilla", "chocolate"],
+        "icing": "chocolate",
+        "points": 450
+    },
+    {
+        "id": 15,
+        "layerCount": 2,
+        "layers": ["vanilla", "strawberry"],
+        "icing": "vanilla",
+        "points": 250
+    },
+    {
+        "id": 16,
+        "layerCount": 1,
+        "layers": ["vanilla"],
+        "icing": "vanilla",
+        "points": 100
+    },
+    {
+        "id": 17,
+        "layerCount": 3,
+        "layers": ["strawberry", "chocolate", "vanilla"],
+        "icing": "vanilla",
+        "points": 400
+    },
+    {
+        "id": 18,
+        "layerCount": 1,
+        "layers": ["chocolate"],
+        "icing": "vanilla",
+        "points": 150
+    },
+    {
+        "id": 19,
+        "layerCount": 2,
+        "layers": ["vanilla", "strawberry"],
+        "icing": "chocolate",
+        "points": 300
+    },
+    {
+        "id": 20,
+        "layerCount": 2,
+        "layers": ["chocolate", "vanilla"],
+        "icing": "strawberry",
+        "points": 300
+    }
 ]

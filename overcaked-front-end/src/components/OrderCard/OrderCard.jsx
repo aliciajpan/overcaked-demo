@@ -5,7 +5,7 @@ import Cake from "../Cake/Cake";
 import "./OrderCard.scss";
 
 function OrderCard({num, icing, cakelayers, expireCake, isGameOver, tutorialModalOpen}) {
-    const msPerLayer = 15000;
+    const msPerLayer = 2000;
     const callback = useCallback(() => {
         expireCake(num); 
     }, [num, expireCake]);
@@ -16,6 +16,7 @@ function OrderCard({num, icing, cakelayers, expireCake, isGameOver, tutorialModa
         fireOnStart: false,
         startImmediately: true,
         speedMultiplier: 1
+    // }, () => expireCake(num));
     }, callback);
 
     useEffect(() => {
