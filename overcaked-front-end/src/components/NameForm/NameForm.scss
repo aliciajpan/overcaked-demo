@@ -15,6 +15,9 @@
         background-color: $vanilla;
         margin-bottom: 1rem;
 
+        transition: transform 0.3s ease;
+        transform: scale(1);
+
         @include desktop {
             height: 4rem;
             width: 25rem;
@@ -22,8 +25,9 @@
         }
 
         &:hover, &:focus{
-            animation: popBigger 1s ease;
-            animation-fill-mode: forwards;
+            // animation: popBigger 1s ease;
+            // animation-fill-mode: forwards;
+            transform: scale(1.1);
         }
     }
 }

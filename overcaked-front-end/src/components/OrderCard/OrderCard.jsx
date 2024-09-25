@@ -8,7 +8,7 @@ function OrderCard({num, icing, cakelayers, expireCake, isGameOver, tutorialModa
     const msPerLayer = 15000;
     const callback = useCallback(() => {
         expireCake(num); 
-    }, [num]);
+    }, [num, expireCake]);
 
     const timer = useTimer({ 
         delay: (cakelayers.length * msPerLayer),
@@ -30,11 +30,11 @@ function OrderCard({num, icing, cakelayers, expireCake, isGameOver, tutorialModa
         else {
             timer.resume();
         }
-    }, [tutorialModalOpen, isGameOver])
+    }, [tutorialModalOpen, isGameOver, timer])
 
     return (
         <article className="ordercard">
-            <p>Order #{num}</p>
+            <p>Order &nbsp;{num} / 20</p>
             <Cake icing={icing} cakelayers={cakelayers} size="small-cake"/>
             <TimerBar time={cakelayers.length} isGameOver={isGameOver} tutorialModalOpen={tutorialModalOpen}/>
         </article>

@@ -233,7 +233,7 @@ function MainPage() {
         if (isGameOver) {
             postScore();
         }
-    }, [isGameOver])
+    }, [isGameOver, postScore])
 
     function openTutorial() {
         setTutorialModalOpen(true);

@@ -13,10 +13,13 @@
 
     &__image {
         width: 3rem;
+        transition: transform 0.3s ease;
+        transform: scale(1);
 
         &:hover {
             cursor: url('/src/assets/images/handpointer.png') 16 16, auto;
-            animation: popBigger 1s both;
+            // animation: popBigger 1s both;
+            transform: scale(1.1);
         }
     }
 
@@ -27,6 +30,9 @@
         opacity: 0%;
         animation: bubbleFade 2s ease;
         animation-fill-mode: forwards;
+
+        transition: transform 0.3s ease;
+        transform: scale(1);
 
         &--bubble {
             background-color: $vanilla;
@@ -44,9 +50,10 @@
         }
 
         &:hover {
-            animation-name: popBigger, bubbleFade;
-            animation-duration: 1s, 2s;
-            animation-timing-function: both, both;
+            // animation-name: popBigger, bubbleFade;
+            // animation-duration: 1s, 2s;
+            // animation-timing-function: both, both;
+            transform: scale(1.1);
         }
     }
 }

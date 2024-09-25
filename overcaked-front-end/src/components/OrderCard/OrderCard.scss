@@ -14,6 +14,9 @@
     padding-bottom: 0.5rem;
     animation: slideCard 1s ease;
 
+    transition: transform 0.3s ease;
+    transform: scale(1);
+
     @include desktop {
         margin: 0.5rem;
         height: 15rem;
@@ -22,7 +25,8 @@
     }
 
     &:hover {
-        animation: popBigger, slideCard 1s ease;
-        animation-fill-mode: forwards;
+        // animation: popBigger, slideCard 1s ease;
+        // animation-fill-mode: forwards;
+        transform: scale(1.1);
     }
 }
