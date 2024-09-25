@@ -36,7 +36,7 @@ function MainPage() {
     const isGameOverRef = useRef(isGameOver);
 
     const maxCakeCount = 20;
-    const expiredCakeLimit = 10;
+    const expiredCakeLimit = 20;
 
     async function fetchAllCakes() {
         try {
@@ -233,7 +233,7 @@ function MainPage() {
         if (isGameOver) {
             postScore();
         }
-    }, [isGameOver])
+    }, [isGameOver, postScore])
 
     function openTutorial() {
         setTutorialModalOpen(true);
