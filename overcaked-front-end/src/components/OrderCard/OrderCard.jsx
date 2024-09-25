@@ -7,6 +7,7 @@ import "./OrderCard.scss";
 function OrderCard({num, icing, cakelayers, expireCake, isGameOver, tutorialModalOpen}) {
     const msPerLayer = 15000;
     const callback = useCallback(() => {
+        console.log("in callback, before expireCake");
         expireCake(num); 
     }, [num, expireCake]);
 
