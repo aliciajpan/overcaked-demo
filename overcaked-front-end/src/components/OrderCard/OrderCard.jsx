@@ -20,16 +20,19 @@ function OrderCard({num, icing, cakelayers, expireCake, isGameOver, tutorialModa
     // }, () => expireCake(num));
     }, callback);
 
+    console.log("timer.delay", timer.delay);
+    console.log("timer remaining time", timer.getRemainingTime());
+
     useEffect(() => {
-        if (isGameOver) {
+        if (isGameOver && timer.isStarted() && timer.isRunning()) {
             timer.stop();
         }
 
-        else if (tutorialModalOpen) {
+        else if (tutorialModalOpen && timer.isStarted() && timer.isRunning()) {
             timer.pause();
         }
 
-        else {
+        else if (timer.isStarted() && !timer.isRunning()) {
             timer.resume();
         }
     }, [tutorialModalOpen, isGameOver, timer])
